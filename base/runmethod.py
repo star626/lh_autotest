@@ -9,7 +9,6 @@ class RunMethod:
 		else:
 			data =json.dumps(data)
 			res = requests.post(url=url,data=data)
-
 		return res
 
 	def get_main(self,url,data=None,header=None):

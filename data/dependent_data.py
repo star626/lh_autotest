@@ -48,7 +48,8 @@ class DependdentData:
 			res = run_method.run_main(method, url,request_data,headers,files,cookies)
 		else:
 			res = run_method.run_main(method,url,request_data)
-		return json.loads(res)
+		print("json,load is %s" %res.content)
+		return res.content
 
 	#根据依赖的key去获取执行依赖测试case的响应,然后返回
 	def get_data_for_key(self,row):
@@ -70,7 +71,6 @@ class DependdentData:
 		# return [math.value for math in madle][0]
 		part_value = self.get_parse_field_value(depend_data,response_data)
 		return part_value
-
 
 	#通过解析依赖的返回数据字段中内容，返回前一次解析结果中的值
 	def get_parse_field_value(self,depend_data,response_data):

@@ -16,6 +16,7 @@ class global_var:
 	excel_neccessary ='12'
 	expect = '13'
 	result = '14'
+	is_save_result='15'
 #获取caseid
 def get_id():
 	return global_var.Id
@@ -62,3 +63,6 @@ def is_depend_post():
 
 def is_depend_excel():
 	return global_var.excel_neccessary
+
+def is_save_result():
+	return global_var.is_save_result

@@ -66,6 +66,7 @@ class GetData:
 			request_data = ""
 		else:
 			request_data = opera_json.get_data(self.get_request_data(row))
+
 		return request_data
 
 	#获取预期结果
@@ -145,3 +146,10 @@ class GetData:
 		else:
 			return data
 
+	def is_save_result(self, row):
+		col = int(data_config.is_save_result())
+		data = self.opera_excel.get_cell_value(row, col)
+		if data == "":
+			return None
+		else:
+			return data
